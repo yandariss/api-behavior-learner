@@ -1,23 +1,25 @@
 import json
 import os
-from typing import Dict, Any, Optional
+from typing import Any
+
 from api_behavior_learner.grouper import EndpointPattern
 
 
 class LLMAnalyzer:
     """Use LLM to analyze API patterns and infer behavior."""
 
-    def __init__(self, api_key: Optional[str] = None):
-        self.api_key = api_key or os.getenv('OPENAI_API_KEY')
+    def __init__(self, api_key: str | None = None):
+        self.api_key = api_key or os.getenv("OPENAI_API_KEY")
         self.client = None
         if self.api_key:
             try:
                 from openai import OpenAI
+
                 self.client = OpenAI(api_key=self.api_key)
             except ImportError:
                 print("Warning: openai package not installed, LLM features disabled")
 
-    def analyze_endpoint(self, endpoint: EndpointPattern) -> Dict[str, Any]:
+    def analyze_endpoint(self, endpoint: EndpointPattern) -> dict[str, Any]:
         """Analyze endpoint pattern and infer purpose, parameters, responses."""
         if not self.client:
             return self._analyze_without_llm(endpoint)
@@ -28,21 +30,18 @@ class LLMAnalyzer:
                 messages=[
                     {
                         "role": "system",
-                        "content": "You are an API analyst. Analyze HTTP endpoint patterns and infer their purpose, required parameters, and response types. Respond in JSON format."
+                        "content": "You are an API analyst. Analyze HTTP endpoint patterns and infer their purpose, required parameters, and response types. Respond in JSON format.",
                     },
-                    {
-                        "role": "user",
-                        "content": self._build_prompt(endpoint)
-                    }
+                    {"role": "user", "content": self._build_prompt(endpoint)},
                 ],
                 temperature=0.3,
-                response_format={"type": "json_object"}
+                response_format={"type": "json_object"},
             )
 
             result_text = response.choices[0].message.content
             return json.loads(result_text)
 
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             print(f"LLM analysis failed: {e}, using fallback")
             return self._analyze_without_llm(endpoint)
 
@@ -50,7 +49,9 @@ class LLMAnalyzer:
         """Build analysis prompt from endpoint data."""
         methods = ", ".join(sorted(endpoint.methods))
         status_codes = ", ".join(sorted(str(s) for s in endpoint.status_codes))
-        params = ", ".join(sorted(endpoint.param_names)) if endpoint.param_names else "none"
+        params = (
+            ", ".join(sorted(endpoint.param_names)) if endpoint.param_names else "none"
+        )
 
         # Get sample request/response
         sample_tx = endpoint.transactions[0] if endpoint.transactions else None
@@ -59,9 +60,13 @@ class LLMAnalyzer:
 
         if sample_tx:
             if sample_tx.request.body:
-                sample_body = f"Sample request body: {json.dumps(sample_tx.request.body)[:200]}"
+                sample_body = (
+                    f"Sample request body: {json.dumps(sample_tx.request.body)[:200]}"
+                )
             if sample_tx.response.body:
-                sample_response = f"Sample response body: {json.dumps(sample_tx.response.body)[:200]}"
+                sample_response = (
+                    f"Sample response body: {json.dumps(sample_tx.response.body)[:200]}"
+                )
 
         prompt = f"""Analyze this API endpoint:
 
@@ -83,20 +88,20 @@ Provide JSON with:
 """
         return prompt
 
-    def _analyze_without_llm(self, endpoint: EndpointPattern) -> Dict[str, Any]:
+    def _analyze_without_llm(self, endpoint: EndpointPattern) -> dict[str, Any]:
         """Fallback analysis without LLM."""
         methods = list(endpoint.methods)
-        
+
         # Infer resource from path
-        parts = endpoint.pattern.strip('/').split('/')
-        resource = parts[0] if parts else 'resource'
+        parts = endpoint.pattern.strip("/").split("/")
+        resource = parts[0] if parts else "resource"
 
         # Infer read vs write
-        read_methods = {'GET', 'HEAD', 'OPTIONS'}
-        write_methods = {'POST', 'PUT', 'PATCH', 'DELETE'}
+        read_methods = {"GET", "HEAD", "OPTIONS"}
+        write_methods = {"POST", "PUT", "PATCH", "DELETE"}
 
-        is_collection = '{id}' not in endpoint.pattern
-        
+        is_collection = "{id}" not in endpoint.pattern
+
         methods_info = {}
         for method in methods:
             if method in read_methods:
@@ -116,5 +121,5 @@ Provide JSON with:
             "parameters": list(endpoint.param_names),
             "response_type": "JSON",
             "authentication": "unknown",
-            "rate_limit": "unknown"
+            "rate_limit": "unknown",
         }

@@ -6,8 +6,8 @@ import json
 import sys
 from pathlib import Path
 
-from api_behavior_learner.har_parser import HARParser
 from api_behavior_learner.grouper import EndpointGrouper
+from api_behavior_learner.har_parser import HARParser
 from api_behavior_learner.llm_analyzer import LLMAnalyzer
 from api_behavior_learner.spec_generator import SpecGenerator
 
@@ -16,41 +16,34 @@ def main():
     parser = argparse.ArgumentParser(
         description="Reverse engineer API behavior from HTTP traffic logs"
     )
-    
+
+    parser.add_argument("har_file", help="Path to HAR file")
+
     parser.add_argument(
-        "har_file",
-        help="Path to HAR file"
-    )
-    
-    parser.add_argument(
-        "-o", "--output",
+        "-o",
+        "--output",
         default="api-docs",
-        help="Output directory (default: api-docs)"
+        help="Output directory (default: api-docs)",
     )
-    
+
     parser.add_argument(
-        "-f", "--format",
+        "-f",
+        "--format",
         choices=["markdown", "openapi", "both"],
         default="both",
-        help="Output format (default: both)"
+        help="Output format (default: both)",
     )
-    
+
+    parser.add_argument("--title", default="API", help="API title for OpenAPI spec")
+
     parser.add_argument(
-        "--title",
-        default="API",
-        help="API title for OpenAPI spec"
+        "--version", default="1.0.0", help="API version for OpenAPI spec"
     )
-    
-    parser.add_argument(
-        "--version",
-        default="1.0.0",
-        help="API version for OpenAPI spec"
-    )
-    
+
     parser.add_argument(
         "--no-llm",
         action="store_true",
-        help="Disable LLM analysis (use basic patterns only)"
+        help="Disable LLM analysis (use basic patterns only)",
     )
 
     args = parser.parse_args()
@@ -84,19 +77,17 @@ def main():
         print("Generating markdown documentation...")
         md_content = spec_gen.generate_markdown(endpoints)
         md_path = output_dir / "api-docs.md"
-        with open(md_path, 'w') as f:
+        with open(md_path, "w") as f:
             f.write(md_content)
         print(f"Written: {md_path}")
 
     if args.format in ["openapi", "both"]:
         print("Generating OpenAPI specification...")
         openapi_spec = spec_gen.generate_openapi(
-            endpoints,
-            title=args.title,
-            version=args.version
+            endpoints, title=args.title, version=args.version
         )
         openapi_path = output_dir / "openapi.json"
-        with open(openapi_path, 'w') as f:
+        with open(openapi_path, "w") as f:
             json.dump(openapi_spec, f, indent=2)
         print(f"Written: {openapi_path}")
 

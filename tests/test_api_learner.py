@@ -1,40 +1,41 @@
 import pytest
-from api_behavior_learner.har_parser import HARParser
+
 from api_behavior_learner.grouper import EndpointGrouper
-from api_behavior_learner.schema_inferrer import SchemaInferrer, ResponseAnalyzer
+from api_behavior_learner.har_parser import HARParser
+from api_behavior_learner.schema_inferrer import ResponseAnalyzer, SchemaInferrer
 
 
 def test_har_parser_load():
     """Test HAR file loading."""
-    har_parser = HARParser('samples/sample.har')
+    har_parser = HARParser("samples/sample.har")
     transactions = har_parser.load()
-    
+
     assert len(transactions) > 0
-    assert transactions[0].request.method in ['GET', 'POST', 'PUT', 'DELETE']
+    assert transactions[0].request.method in ["GET", "POST", "PUT", "DELETE"]
     assert transactions[0].response.status > 0
 
 
 def test_endpoint_grouper():
     """Test endpoint pattern grouping."""
-    har_parser = HARParser('samples/sample.har')
+    har_parser = HARParser("samples/sample.har")
     transactions = har_parser.load()
-    
+
     grouper = EndpointGrouper(transactions)
     endpoints = grouper.group()
-    
+
     assert len(endpoints) > 0
-    assert any('{id}' in pattern for pattern in endpoints.keys())
+    assert any("{id}" in pattern for pattern in endpoints)
 
 
 def test_pattern_extraction():
     """Test ID pattern replacement."""
-    har_parser = HARParser('samples/sample.har')
+    har_parser = HARParser("samples/sample.har")
     transactions = har_parser.load()
-    
+
     grouper = EndpointGrouper(transactions)
     patterns = [grouper._extract_pattern(tx.request.path) for tx in transactions]
-    
-    assert '/users/{id}' in patterns or '/products/{id}' in patterns
+
+    assert "/users/{id}" in patterns or "/products/{id}" in patterns
 
 
 def test_schema_inference_primitives():
@@ -57,7 +58,7 @@ def test_schema_inference_object():
     """Test schema inference for objects."""
     data = {"name": "John", "age": 30}
     schema = SchemaInferrer.infer(data)
-    
+
     assert schema["type"] == "object"
     assert "properties" in schema
     assert schema["properties"]["name"]["type"] == "string"
@@ -66,11 +67,8 @@ def test_schema_inference_object():
 
 def test_response_analyzer_description():
     """Test response description generation."""
-    products_response = {
-        "products": [{"id": 1, "name": "Product 1"}],
-        "total": 1
-    }
-    
+    products_response = {"products": [{"id": 1, "name": "Product 1"}], "total": 1}
+
     desc = ResponseAnalyzer.describe_response(products_response)
     assert "products" in desc.lower()
 

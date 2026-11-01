@@ -1,5 +1,5 @@
-import json
-from typing import Dict, Any, List
+from typing import Any
+
 from api_behavior_learner.grouper import EndpointPattern
 from api_behavior_learner.llm_analyzer import LLMAnalyzer
 from api_behavior_learner.schema_inferrer import ResponseAnalyzer
@@ -11,7 +11,7 @@ class SpecGenerator:
     def __init__(self, analyzer: LLMAnalyzer):
         self.analyzer = analyzer
 
-    def generate_markdown(self, endpoints: Dict[str, EndpointPattern]) -> str:
+    def generate_markdown(self, endpoints: dict[str, EndpointPattern]) -> str:
         """Generate markdown API documentation."""
         md = "# API Documentation\n\n"
         md += f"Generated from {len(endpoints)} endpoint patterns.\n\n"
@@ -20,9 +20,11 @@ class SpecGenerator:
             analysis = self.analyzer.analyze_endpoint(endpoint)
             sample_tx = endpoint.transactions[0] if endpoint.transactions else None
             response_desc = ""
-            
+
             if sample_tx and sample_tx.response.body:
-                response_desc = ResponseAnalyzer.describe_response(sample_tx.response.body)
+                response_desc = ResponseAnalyzer.describe_response(
+                    sample_tx.response.body
+                )
 
             md += f"## {analysis.get('resource', 'Resource').title()}\n\n"
             md += f"**Pattern:** `{pattern}`\n\n"
@@ -30,7 +32,7 @@ class SpecGenerator:
 
             md += "### Methods\n\n"
             for method in sorted(endpoint.methods):
-                desc = analysis.get('methods_info', {}).get(method, f"{method} request")
+                desc = analysis.get("methods_info", {}).get(method, f"{method} request")
                 md += f"- **{method}**: {desc}\n"
             md += "\n"
 
@@ -40,7 +42,7 @@ class SpecGenerator:
                     md += f"- `{param}`: Unknown type\n"
                 md += "\n"
 
-            md += f"### Response\n\n"
+            md += "### Response\n\n"
             md += f"- **Type:** {analysis.get('response_type', 'JSON')}\n"
             if response_desc:
                 md += f"- **Description:** {response_desc}\n"
@@ -50,20 +52,24 @@ class SpecGenerator:
 
         return md
 
-    def generate_openapi(self, endpoints: Dict[str, EndpointPattern], 
-                        title: str = "API", version: str = "1.0.0") -> Dict[str, Any]:
+    def generate_openapi(
+        self,
+        endpoints: dict[str, EndpointPattern],
+        title: str = "API",
+        version: str = "1.0.0",
+    ) -> dict[str, Any]:
         """Generate OpenAPI 3.0.0 specification."""
         spec = {
             "openapi": "3.0.0",
             "info": {
                 "title": title,
                 "version": version,
-                "description": "Generated from HTTP traffic analysis"
+                "description": "Generated from HTTP traffic analysis",
             },
             "servers": [
                 {"url": "https://api.example.com", "description": "API Server"}
             ],
-            "paths": {}
+            "paths": {},
         }
 
         for pattern, endpoint in endpoints.items():
@@ -75,12 +81,12 @@ class SpecGenerator:
 
             for method in sorted(endpoint.methods):
                 method_lower = method.lower()
-                method_desc = analysis.get('methods_info', {}).get(method, "")
+                method_desc = analysis.get("methods_info", {}).get(method, "")
 
                 operation = {
                     "summary": method_desc or f"{method} {pattern}",
-                    "tags": [analysis.get('resource', 'resource').title()],
-                    "responses": {}
+                    "tags": [analysis.get("resource", "resource").title()],
+                    "responses": {},
                 }
 
                 # Add parameter documentation
@@ -90,7 +96,7 @@ class SpecGenerator:
                             "name": param,
                             "in": "query",
                             "required": False,
-                            "schema": {"type": "string"}
+                            "schema": {"type": "string"},
                         }
                         for param in sorted(endpoint.param_names)
                     ]
@@ -99,28 +105,24 @@ class SpecGenerator:
                 for status in sorted(endpoint.status_codes):
                     response_schema = {"type": "object"}
                     response_desc = "Response"
-                    
+
                     if sample_tx and sample_tx.response.body:
-                        response_schema = ResponseAnalyzer.get_schema(sample_tx.response.body)
-                        response_desc = ResponseAnalyzer.describe_response(sample_tx.response.body)
-                    
+                        response_schema = ResponseAnalyzer.get_schema(
+                            sample_tx.response.body
+                        )
+                        response_desc = ResponseAnalyzer.describe_response(
+                            sample_tx.response.body
+                        )
+
                     operation["responses"][str(status)] = {
                         "description": response_desc,
-                        "content": {
-                            "application/json": {
-                                "schema": response_schema
-                            }
-                        }
+                        "content": {"application/json": {"schema": response_schema}},
                     }
 
                 if not operation["responses"]:
                     operation["responses"]["200"] = {
                         "description": "Success",
-                        "content": {
-                            "application/json": {
-                                "schema": {"type": "object"}
-                            }
-                        }
+                        "content": {"application/json": {"schema": {"type": "object"}}},
                     }
 
                 spec["paths"][pattern][method_lower] = operation
