@@ -1,4 +1,3 @@
-
 """CLI for API Behavior Learner."""
 
 import argparse
