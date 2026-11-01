@@ -1,0 +1,5698 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API",
+    "version": "1.0.0",
+    "description": "Generated from HTTP traffic analysis"
+  },
+  "servers": [
+    {
+      "url": "https://api.example.com",
+      "description": "API Server"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Retrieve ",
+        "tags": [
+          ""
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-includes/css/dashicons.min.css": {
+      "get": {
+        "summary": "Retrieve wp-includes",
+        "tags": [
+          "Wp-Includes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/post-views-counter/css/frontend.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/instagram-feed/assets/tokens/sb-tokens-local.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/instagram-feed/css/sbi-styles.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/instagram-feed/vendor/smashballoon/framework/Packages/Blocks/css/sb-elementor.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/mystickymenu/dist/css/mystickymenu-front.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/wp-multilang/assets/styles/main.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/pojo-accessibility/modules/legacy/assets/css/style.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/css/style.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/css/a11y.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/jet-menu/assets/public/css/public.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/uploads/jet-menu/jet-menu-general.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/3d-flipbook-dflip-lite/assets/css/dflip.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInRight.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/frontend.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-image.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-heading.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/uploads/essential-addons-elementor/eael-6784.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/uploads/elementor/css/post-34638.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/conditionals/shapes.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/widget-slides.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-divider.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/widget-call-to-action.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/conditionals/transitions.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-video.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/widget-posts.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/widget-flip-box.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/uploads/elementor/css/post-6784.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/uploads/elementor/css/post-13730.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/tablepress-combined.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/jet-menu/integration/themes/oceanwp/assets/css/style.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/ocean-extra/assets/css/widgets.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/ocean-social-sharing/assets/css/style.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/css": {
+      "get": {
+        "summary": "Retrieve css",
+        "tags": [
+          "Css"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "display",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "family",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-includes/js/jquery/jquery.min.js": {
+      "get": {
+        "summary": "Retrieve wp-includes",
+        "tags": [
+          "Wp-Includes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-includes/js/jquery/jquery-migrate.min.js": {
+      "get": {
+        "summary": "Retrieve wp-includes",
+        "tags": [
+          "Wp-Includes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/gtag/js": {
+      "get": {
+        "summary": "Retrieve gtag",
+        "tags": [
+          "Gtag"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/cropped-pict-1-300x111.png": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/f09c0ab0-18e2-498c-bb7e-269a0d26936f-oke-600x600.png": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-10-30-at-12.53.58-PM-1-600x600.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasi-kepada-Muhammad-Saifudin-mahasiswa-Program-Studi-Teknik-Material-Itera-a-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasi-kepada-Paska-Dwirotama-Simbolon-mahasiswa-Program-Studi-Teknik-Biosistem--819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasi-kepada-Tim-Beton-Gege-mahasiswa-Teknik-Sipil-ITERA-atas-raihan-Juara-Harap-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasi-kepada-Tim-ITERA-atas-prestasi-pada-ajang-Depati-Amir-Mining-Competition-V-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasi-setinggi-tingginya-kepada-Maura-Cantyqa-Candra-mahasiswi-Program-Studi-Re-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasi-setinggi-tingginya-untuk-para-Mahasiswa-Berprestasi-ITERA-Tahun-2026.%E2%9C%A8Juar-1-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasi-setinggi-tingginya-untuk-para-Mahasiswa-Berprestasi-ITERA-Tahun-2026.%E2%9C%A8Juar-2-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasi-setinggi-tingginya-untuk-para-Mahasiswa-Berprestasi-ITERA-Tahun-2026.%E2%9C%A8Juar-3-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasi-setinggi-tingginya-untuk-para-Mahasiswa-Berprestasi-ITERA-Tahun-2026.%E2%9C%A8Juar-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-ApresiasiInstitut-Teknologi-Sumatera-mengucapkan-selamat-kepada-Alio-Harefa-mahasis-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Selamat-dan-apresiasikepada-Lusy-Rona-Rumata-SihombingMahasiswa-Rekayasa-Keolahragaan-ITERAAtas--819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Tim-mahasiswa-ITERA-berhasil-meraih-Juara-1-pada-Ajang-Industrial-Experience-2026-yang-diselengg-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/IMG-20260804-WA0014-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/IMG-20260804-WA0019-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/IMG-20260805-WA0005-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Mahasiswa-Program-Studi-Teknik-Geofisika-Itera-kembali-mengharumkan-nama-Itera-di-ajang-Global-Y-819x1024.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/newsletter1.png": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/mystickymenu/dist/js/morphext.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/mystickymenu/dist/js/welcomebar-front.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/mystickymenu/dist/js/detectmobilebrowser.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/mystickymenu/dist/js/mystickymenu.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/wp-multilang/assets/blocks/language-switcher/js/switcher-block.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/pojo-accessibility/modules/legacy/assets/js/app.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-includes/js/imagesloaded.min.js": {
+      "get": {
+        "summary": "Retrieve wp-includes",
+        "tags": [
+          "Wp-Includes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/theme.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/vendors/isotope.pkgd.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/blog-masonry.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/vendors/sidr.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/sidebar-mobile-menu.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/drop-down-search.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/vendors/magnific-popup.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/ow-lightbox.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/vendors/flickity.pkgd.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/ow-slider.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/scroll-effect.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/scroll-top.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/js/select.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-includes/js/dist/hooks.min.js": {
+      "get": {
+        "summary": "Retrieve wp-includes",
+        "tags": [
+          "Wp-Includes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/jet-menu/assets/public/js/jet-menu-public-scripts.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/3d-flipbook-dflip-lite/assets/js/dflip.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/js/frontend-modules.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-includes/js/jquery/ui/core.min.js": {
+      "get": {
+        "summary": "Retrieve wp-includes",
+        "tags": [
+          "Wp-Includes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/js/frontend.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/uploads/essential-addons-elementor/eael-6784.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/ocean-social-sharing/assets/js/social.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-includes/js/dist/i18n.min.js": {
+      "get": {
+        "summary": "Retrieve wp-includes",
+        "tags": [
+          "Wp-Includes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/js/frontend.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/jet-menu/includes/elementor/assets/public/js/widgets-scripts.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092": {
+      "get": {
+        "summary": "Retrieve beacon.min.js",
+        "tags": [
+          "Beacon.Min.Js"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/fonts/fontawesome/webfonts/fa-regular-400.woff2": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/themes/oceanwp/assets/fonts/simple-line-icons/Simple-Line-Icons.woff2": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "v",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/s/baijamjuree/v13/LDIqapSCOBt_aeQQ7ftydoa0gebelJo0.woff2": {
+      "get": {
+        "summary": "Retrieve s",
+        "tags": [
+          "S"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/s/sourcesanspro/v24/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2": {
+      "get": {
+        "summary": "Retrieve s",
+        "tags": [
+          "S"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/cropped-pict-1.png": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/DSC04268.JPG-600x600.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Urban-Heat-Island-Webinar-Grid-150x150.png": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/keuangan-3-150x150.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-10-28-at-17.08.14-150x150.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/dokumentasi-4-600x600.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-10-28-at-10.48.34-1-600x600.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/ITR06724.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Itera-Botanical-Garden-4.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-08-28-at-10.43.59-PM.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2025-12-29-at-13.08.10-1.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Transplantasi-Terumbu-Karang.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Drone-Itera-1536x1023.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-09-15-at-23.31.41.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Drone-Itera.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-04-09-at-11.54.15.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/kegiatan.png": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/dsfhb.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/DSC03100.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-09-01-at-08.27.02.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-10-01-at-10.00.50-1-1536x1152.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/ITR1218.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/jepang-1024x469.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/IMG_20260905_174110.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/IMG_7103.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-08-13-at-09.40.08-1-1-1024x640.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/IMG-20260804-WA0011-1.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-08-20-at-14.06.58-800x450.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-10-16-at-07.48.36-1024x728.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2026-09-13-at-09.53.45.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/pers.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/MBKM.png": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/WhatsApp-Image-2024-04-24-at-19.45.04-4.jpeg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/PPID.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/PMB.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/DOKUMEN.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/PLTS.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/Wisudawan-Terbaik-ITERA.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/lapor.jpg": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-includes/js/wp-emoji-release.min.js": {
+      "get": {
+        "summary": "Retrieve wp-includes",
+        "tags": [
+          "Wp-Includes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ver",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/wp-content/plugins/elementor/assets/js/section-frontend-handlers.d85ab872da118940910d.bundle.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor/assets/js/shared-frontend-handlers.03caa53373b56d3bab67.bundle.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor/assets/js/text-editor.45609661e409413f1cef.bundle.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/js/slides.8e9b74f1b31471377df8.bundle.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor/assets/js/video.86d44e46e43d0807e708.bundle.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/js/load-more.7c4417f8a727b79f546f.bundle.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor-pro/assets/js/posts.844727d8428792223d2f.bundle.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/plugins/elementor/assets/js/image-carousel.6167d20b95b33386757b.bundle.min.js": {
+      "get": {
+        "summary": "Retrieve wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cdn-cgi/rum": {
+      "post": {
+        "summary": "Modify cdn-cgi",
+        "tags": [
+          "Cdn-Cgi"
+        ],
+        "responses": {
+          "204": {
+            "description": "Status 204 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/iframe_api": {
+      "get": {
+        "summary": "Retrieve iframe_api",
+        "tags": [
+          "Iframe_Api"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/f09c0ab0-18e2-498c-bb7e-269a0d26936f-oke.png": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wp-content/uploads/{id}/{id}/cropped-logo-itera-oke-e1549253362229-2-32x32.png": {
+      "get": {
+        "summary": "Get single wp-content",
+        "tags": [
+          "Wp-Content"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/s/player/11a45ffb/www-widgetapi.vflset/www-widgetapi.js": {
+      "get": {
+        "summary": "Retrieve s",
+        "tags": [
+          "S"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/embed/P1K4aR1vGfA": {
+      "get": {
+        "summary": "Retrieve embed",
+        "tags": [
+          "Embed"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "aoriginsup",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "autoplay",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cc_load_policy",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "controls",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enablejsapi",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forigin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "origin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "playsinline",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rel",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "vf",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "widgetid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/embed/YmH-X_XN9Zc": {
+      "get": {
+        "summary": "Retrieve embed",
+        "tags": [
+          "Embed"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "aoriginsup",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "autoplay",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cc_load_policy",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "controls",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enablejsapi",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forigin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "origin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "playsinline",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rel",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "vf",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "widgetid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/embed/2aVCVq-V3Us": {
+      "get": {
+        "summary": "Retrieve embed",
+        "tags": [
+          "Embed"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "aoriginsup",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "autoplay",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cc_load_policy",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "controls",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enablejsapi",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forigin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "origin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "playsinline",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rel",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "vf",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "widgetid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/embed/HS_RPLa5gPw": {
+      "get": {
+        "summary": "Retrieve embed",
+        "tags": [
+          "Embed"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "aoriginsup",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "autoplay",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cc_load_policy",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "controls",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enablejsapi",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forigin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "origin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "playsinline",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rel",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "vf",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "widgetid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/embed/krEAQN1d9UQ": {
+      "get": {
+        "summary": "Retrieve embed",
+        "tags": [
+          "Embed"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "aoriginsup",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "autoplay",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cc_load_policy",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "controls",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enablejsapi",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "forigin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "origin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "playsinline",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rel",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "vf",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "widgetid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/s/player/11a45ffb/www-player.css": {
+      "get": {
+        "summary": "Retrieve s",
+        "tags": [
+          "S"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/s/_/ytembeds/_/ss/k=ytembeds.base.1rocrYPuO4g.L.W.O/am=AAAAgADAGA/d=1/br=1/rs=AGKMywFSnYFZLX56IKPYOInW0UplptSqkQ/m=root,base": {
+      "get": {
+        "summary": "Retrieve s",
+        "tags": [
+          "S"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/s/_/ytembeds/_/js/k=ytembeds.base.en_US.2oM_mCMT96E.2021.O/am=AAAAgADAGA/d=1/excm=base,root/br=1/rs=AGKMywHb9s9jInTOXAKzJiNoQfyDD0Lkdw/m=root,base": {
+      "get": {
+        "summary": "Retrieve s",
+        "tags": [
+          "S"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/s/player/11a45ffb/player_embed_es6.vflset/en_US/base.js": {
+      "get": {
+        "summary": "Retrieve s",
+        "tags": [
+          "S"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/s/roboto/v48/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2": {
+      "get": {
+        "summary": "Retrieve s",
+        "tags": [
+          "S"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pagead/id": {
+      "get": {
+        "summary": "Retrieve pagead",
+        "tags": [
+          "Pagead"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/instream/ad_status.js": {
+      "get": {
+        "summary": "Retrieve instream",
+        "tags": [
+          "Instream"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/s/_/ytembeds/_/js/k=ytembeds.base.en_US.2oM_mCMT96E.2021.O/ck=ytembeds.base.1rocrYPuO4g.L.W.O/am=AAAAgADAGA/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywFJja9gaeaoSKBpZ3XiucShDzpfdQ/m=r78Drb": {
+      "get": {
+        "summary": "Retrieve s",
+        "tags": [
+          "S"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/js/th/rsSwjcGNgF8jpm_o4j3WV-HcKQTvJHp8aSN__p2g-C0.js": {
+      "get": {
+        "summary": "Retrieve js",
+        "tags": [
+          "Js"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vi_webp/2aVCVq-V3Us/default.webp": {
+      "get": {
+        "summary": "Retrieve vi_webp",
+        "tags": [
+          "Vi_Webp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vi_webp/HS_RPLa5gPw/default.webp": {
+      "get": {
+        "summary": "Retrieve vi_webp",
+        "tags": [
+          "Vi_Webp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vi_webp/krEAQN1d9UQ/default.webp": {
+      "get": {
+        "summary": "Retrieve vi_webp",
+        "tags": [
+          "Vi_Webp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vi_webp/P1K4aR1vGfA/default.webp": {
+      "get": {
+        "summary": "Retrieve vi_webp",
+        "tags": [
+          "Vi_Webp"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vi/YmH-X_XN9Zc/default.jpg": {
+      "get": {
+        "summary": "Retrieve vi",
+        "tags": [
+          "Vi"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "rs",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sqp",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/generate_204": {
+      "get": {
+        "summary": "Retrieve generate_204",
+        "tags": [
+          "Generate_204"
+        ],
+        "responses": {
+          "204": {
+            "description": "Status 204 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/$rpc/google.internal.waa.v1.Waa/GenerateIT": {
+      "post": {
+        "summary": "Modify $rpc",
+        "tags": [
+          "$Rpc"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/g/collect": {
+      "post": {
+        "summary": "Modify g",
+        "tags": [
+          "G"
+        ],
+        "responses": {
+          "204": {
+            "description": "Status 204 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "_ee",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_eu",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_p",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "_s",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dl",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dma",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dt",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "en",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "frm",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gaf",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gap.plf",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gcd",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gtm",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "npa",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pscdl",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rcb",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sct",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "seg",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sr",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tag_exp",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tfd",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uaa",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uab",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uafvl",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uamb",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uap",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uapv",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "uaw",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ul",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "v",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/youtubei/v1/log_event": {
+      "post": {
+        "summary": "Modify youtubei",
+        "tags": [
+          "Youtubei"
+        ],
+        "responses": {
+          "200": {
+            "description": "Status 200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "alt",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
