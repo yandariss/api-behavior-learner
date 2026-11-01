@@ -1,5 +1,8 @@
 # API Behavior Learner
 
+[![Tests](https://github.com/yandariss/api-behavior-learner/actions/workflows/tests.yml/badge.svg)](https://github.com/yandariss/api-behavior-learner/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Reverse engineer REST APIs from HTTP traffic logs. Automatically detect endpoints, infer schemas, generate OpenAPI specs and documentation.
 
 ## Features
