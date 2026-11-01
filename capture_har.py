@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """Capture HAR from browser automation."""
 
 import json

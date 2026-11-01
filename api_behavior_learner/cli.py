@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """CLI for API Behavior Learner."""
 
 import argparse
