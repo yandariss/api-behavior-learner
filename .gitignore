@@ -13,3 +13,4 @@ build/
 .env
 api-docs/
 *.har
+!samples/sample.har
