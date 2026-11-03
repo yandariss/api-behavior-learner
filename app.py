@@ -156,11 +156,53 @@ def main():
         )
         with overview:
             st.subheader("Discovered surface")
+            filter_col, method_col, status_col = st.columns([2, 1, 1])
+            with filter_col:
+                search = (
+                    st.text_input(
+                        "Search endpoints",
+                        placeholder="Search by path, e.g. /users",
+                        label_visibility="collapsed",
+                    )
+                    .strip()
+                    .lower()
+                )
+            with method_col:
+                method_filter = st.selectbox(
+                    "Method",
+                    ["All methods"] + methods,
+                    label_visibility="collapsed",
+                )
+            all_statuses = sorted(
+                {
+                    str(code)
+                    for endpoint in endpoints.values()
+                    for code in endpoint.status_codes
+                }
+            )
+            with status_col:
+                status_filter = st.selectbox(
+                    "Status",
+                    ["All statuses"] + all_statuses,
+                    label_visibility="collapsed",
+                )
+
+            visible_count = 0
             for pattern, endpoint in sorted(endpoints.items()):
+                if search and search not in pattern.lower():
+                    continue
                 status_codes = ", ".join(
                     sorted(str(code) for code in endpoint.status_codes)
                 )
+                if (
+                    status_filter != "All statuses"
+                    and status_filter not in status_codes.split(", ")
+                ):
+                    continue
                 for method in sorted(endpoint.methods):
+                    if method_filter != "All methods" and method != method_filter:
+                        continue
+                    visible_count += 1
                     method_class = (
                         method.lower()
                         if method.lower() in {"get", "post", "put", "delete"}
@@ -170,6 +212,10 @@ def main():
                         f'<div class="endpoint"><span class="method {method_class}">{method}</span><span class="path">{pattern}</span><span class="status">{status_codes}</span></div>',
                         unsafe_allow_html=True,
                     )
+            if visible_count == 0:
+                st.info("No endpoints match current filters.")
+            else:
+                st.caption(f"Showing {visible_count} endpoint operations")
         with docs:
             st.download_button(
                 "Download Markdown", markdown_docs, "api-docs.md", "text/markdown"
