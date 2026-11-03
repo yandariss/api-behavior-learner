@@ -9,136 +9,192 @@ from api_behavior_learner.har_parser import HARParser
 from api_behavior_learner.llm_analyzer import LLMAnalyzer
 from api_behavior_learner.spec_generator import SpecGenerator
 
+st.set_page_config(
+    page_title="API Behavior Learner",
+    page_icon="◈",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+st.markdown(
+    """
+    <style>
+    .stApp { background: #080b14; color: #e8eefc; }
+    [data-testid="stHeader"] { background: rgba(8,11,20,.92); }
+    [data-testid="stSidebar"] { background: #0d1220; border-right: 1px solid #1f2a44; }
+    .hero { padding: 2.5rem 2.8rem; border: 1px solid #263858; border-radius: 24px; background: linear-gradient(135deg,#101a32 0%,#111229 55%,#1a1230 100%); box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+    .eyebrow { color: #6ee7d8; font-size: .78rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .hero h1 { color: #f7faff; font-size: 3.2rem; line-height: 1.05; margin: .5rem 0 1rem; }
+    .hero p { color: #aab8d4; font-size: 1.05rem; max-width: 720px; }
+    .step { background: #10182a; border: 1px solid #243655; border-radius: 14px; padding: 1rem; min-height: 112px; }
+    .step b { color: #f7faff; display: block; margin-bottom: .4rem; }
+    .step span { color: #91a2c2; font-size: .9rem; }
+    .metric-card { background: #10182a; border: 1px solid #263858; border-radius: 16px; padding: 1rem 1.2rem; }
+    .metric-label { color: #8798b8; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+    .metric-value { color: #f7faff; font-size: 2rem; font-weight: 800; }
+    .endpoint { background: #10182a; border: 1px solid #263858; border-radius: 12px; padding: .8rem 1rem; margin: .45rem 0; }
+    .method { display: inline-block; border-radius: 6px; padding: .2rem .45rem; margin-right: .65rem; font-size: .72rem; font-weight: 800; }
+    .get { color: #70e1c5; background: #12352f; } .post { color: #86b8ff; background: #172e57; }
+    .put { color: #f8d276; background: #493916; } .delete { color: #ff8f9b; background: #4a2028; }
+    .path { color: #e8eefc; font-family: monospace; } .status { color: #91a2c2; float: right; font-size: .82rem; }
+    div[data-testid="stFileUploader"] { background: #10182a; border: 1px dashed #4f6fa8; border-radius: 18px; padding: .6rem; }
+    .stButton > button, .stDownloadButton > button { border-radius: 10px; border: 1px solid #3b82f6; background: #17366c; color: #eaf2ff; font-weight: 700; }
+    .stButton > button:hover, .stDownloadButton > button:hover { border-color: #6ee7d8; background: #1d4c76; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+def metric(label, value):
+    st.markdown(
+        f'<div class="metric-card"><div class="metric-label">{label}</div><div class="metric-value">{value}</div></div>',
+        unsafe_allow_html=True,
+    )
+
+
+def analyze(uploaded_file, use_llm, api_title, api_version):
+    with tempfile.NamedTemporaryFile(suffix=".har", delete=False) as tmp_file:
+        tmp_file.write(
+            uploaded_file
+            if isinstance(uploaded_file, bytes)
+            else uploaded_file.getbuffer()
+        )
+        tmp_path = tmp_file.name
+    try:
+        transactions = HARParser(tmp_path).load()
+        endpoints = EndpointGrouper(transactions).group()
+        analyzer = LLMAnalyzer() if use_llm else LLMAnalyzer(api_key="")
+        generator = SpecGenerator(analyzer)
+        return (
+            transactions,
+            endpoints,
+            generator.generate_markdown(endpoints),
+            generator.generate_openapi(endpoints, api_title, api_version),
+        )
+    finally:
+        Path(tmp_path).unlink(missing_ok=True)
+
 
 def main():
-    st.set_page_config(
-        page_title="API Behavior Learner",
-        page_icon="🔍",
-        layout="wide",
-        initial_sidebar_state="expanded",
-    )
-
-    st.title("🔍 API Behavior Learner")
     st.markdown(
-        "Reverse engineer REST APIs from HTTP traffic logs. Upload a HAR file to automatically generate OpenAPI specs and documentation."
+        '<div class="hero"><div class="eyebrow">◈ API intelligence lab</div><h1>Turn traffic into API intelligence.</h1><p>Upload HTTP traffic. Discover endpoint behavior. Export clean Markdown docs and OpenAPI specs in seconds.</p></div>',
+        unsafe_allow_html=True,
     )
+    st.write("")
+    steps = st.columns(3)
+    for column, title, text in zip(
+        steps,
+        ["01 · Capture", "02 · Analyze", "03 · Export"],
+        [
+            "Drop a HAR file from browser DevTools.",
+            "Detect routes, schemas, methods, and auth.",
+            "Download Markdown and OpenAPI 3.0.",
+        ],
+    ):
+        with column:
+            st.markdown(
+                f'<div class="step"><b>{title}</b><span>{text}</span></div>',
+                unsafe_allow_html=True,
+            )
+    st.write("")
 
-    st.sidebar.header("Settings")
-    use_llm = st.sidebar.checkbox("Use OpenAI LLM for smart analysis", value=False)
-    api_title = st.sidebar.text_input("API Title", value="API")
-    api_version = st.sidebar.text_input("API Version", value="1.0.0")
-
-    st.header("📤 Upload HAR File")
+    with st.sidebar:
+        st.markdown("## ◈ Control panel")
+        use_llm = st.toggle(
+            "AI descriptions", value=False, help="Uses OPENAI_API_KEY when configured."
+        )
+        api_title = st.text_input("API title", "Discovered API")
+        api_version = st.text_input("Version", "1.0.0")
+        st.divider()
+        st.caption(
+            "Privacy first: files process in this app session and are not committed to the repository."
+        )
 
     uploaded_file = st.file_uploader(
-        "Drag and drop or click to upload a .har file",
+        "Drop HAR file here",
         type=["har"],
-        help="Export HAR from browser DevTools (Network tab → Save as HAR)",
+        help="Export from DevTools → Network → Save all as HAR",
     )
+    sample_path = Path("samples/sample.har")
+    use_sample = st.button("Load demo HAR", disabled=not sample_path.exists())
 
-    if uploaded_file is not None:
-        with st.spinner("Processing HAR file..."):
-            try:
-                # Save uploaded file temporarily
-                with tempfile.NamedTemporaryFile(
-                    suffix=".har", delete=False
-                ) as tmp_file:
-                    tmp_file.write(uploaded_file.getbuffer())
-                    tmp_path = tmp_file.name
+    if uploaded_file is None and use_sample:
+        uploaded_file = sample_path.read_bytes()
 
-                # Parse HAR
-                har_parser = HARParser(tmp_path)
-                transactions = har_parser.load()
+    if uploaded_file is None:
+        st.info("Upload a HAR file or load the demo to begin.")
+        st.markdown("### What you get")
+        st.markdown(
+            "- Endpoint patterns with dynamic IDs normalized\n- Request and response JSON schemas\n- Authentication scheme detection\n- OpenAPI 3.0 and Markdown downloads"
+        )
+        return
 
-                st.success(f"✅ Found {len(transactions)} HTTP transactions")
+    try:
+        with st.spinner("Mapping API behavior..."):
+            transactions, endpoints, markdown_docs, openapi_spec = analyze(
+                uploaded_file, use_llm, api_title, api_version
+            )
+        auth_count = len(openapi_spec.get("components", {}).get("securitySchemes", {}))
+        methods = sorted(
+            {method for endpoint in endpoints.values() for method in endpoint.methods}
+        )
+        st.success(f"Analysis complete · {len(endpoints)} endpoint patterns discovered")
+        cards = st.columns(4)
+        with cards[0]:
+            metric("Transactions", len(transactions))
+        with cards[1]:
+            metric("Endpoints", len(endpoints))
+        with cards[2]:
+            metric("HTTP methods", len(methods))
+        with cards[3]:
+            metric("Auth schemes", auth_count)
+        st.write("")
 
-                # Group endpoints
-                grouper = EndpointGrouper(transactions)
-                endpoints = grouper.group()
-
-                st.info(f"📍 Detected {len(endpoints)} unique endpoint patterns")
-
-                # Analyze
-                analyzer = LLMAnalyzer() if use_llm else LLMAnalyzer(api_key="")
-                spec_gen = SpecGenerator(analyzer)
-
-                # Generate specs
-                markdown_docs = spec_gen.generate_markdown(endpoints)
-                openapi_spec = spec_gen.generate_openapi(
-                    endpoints, title=api_title, version=api_version
+        overview, docs, spec, raw = st.tabs(
+            ["Overview", "Markdown docs", "OpenAPI spec", "Raw JSON"]
+        )
+        with overview:
+            st.subheader("Discovered surface")
+            for pattern, endpoint in sorted(endpoints.items()):
+                status_codes = ", ".join(
+                    sorted(str(code) for code in endpoint.status_codes)
                 )
-
-                # Display results in tabs
-                tab1, tab2, tab3 = st.tabs(
-                    ["📄 Markdown Docs", "📋 OpenAPI Spec", "📊 Summary"]
-                )
-
-                with tab1:
-                    st.subheader("API Documentation (Markdown)")
-                    st.markdown(markdown_docs)
-                    st.download_button(
-                        label="⬇️ Download Markdown",
-                        data=markdown_docs,
-                        file_name="api-docs.md",
-                        mime="text/markdown",
+                for method in sorted(endpoint.methods):
+                    method_class = (
+                        method.lower()
+                        if method.lower() in {"get", "post", "put", "delete"}
+                        else "get"
                     )
-
-                with tab2:
-                    st.subheader("OpenAPI 3.0.0 Specification")
-                    st.json(openapi_spec)
-                    st.download_button(
-                        label="⬇️ Download OpenAPI JSON",
-                        data=json.dumps(openapi_spec, indent=2),
-                        file_name="openapi.json",
-                        mime="application/json",
+                    st.markdown(
+                        f'<div class="endpoint"><span class="method {method_class}">{method}</span><span class="path">{pattern}</span><span class="status">{status_codes}</span></div>',
+                        unsafe_allow_html=True,
                     )
-
-                with tab3:
-                    st.subheader("Analysis Summary")
-                    col1, col2, col3 = st.columns(3)
-                    col1.metric("HTTP Transactions", len(transactions))
-                    col2.metric("Endpoint Patterns", len(endpoints))
-                    methods_count = len(
-                        {m for ep in endpoints.values() for m in ep.methods}
-                    )
-                    col3.metric("Methods Detected", methods_count)
-
-                    st.subheader("Endpoints Found")
-                    for pattern, endpoint in sorted(endpoints.items()):
-                        methods = ", ".join(sorted(endpoint.methods))
-                        status_codes = ", ".join(
-                            sorted(str(s) for s in endpoint.status_codes)
-                        )
-                        st.write(
-                            f"- **{pattern}** → {methods} (Status: {status_codes})"
-                        )
-
-                # Cleanup
-                Path(tmp_path).unlink()
-
-            except Exception as e:  # noqa: BLE001
-                st.error(f"❌ Error processing HAR file: {e!s}")
-
-    else:
-        st.info("👆 Upload a HAR file to get started")
-        with st.expander("How to export a HAR file"):
-            st.markdown("""
-            **Chrome / Edge:**
-            1. Open DevTools (F12)
-            2. Go to Network tab
-            3. Navigate to API or reload page
-            4. Right-click any request → Save all as HAR
-
-            **Firefox:**
-            1. Open DevTools (F12)
-            2. Go to Network tab
-            3. Right-click → Save All as HAR
-
-            **Safari:**
-            1. Show Develop menu (Preferences → Advanced)
-            2. Develop → Show Web Inspector
-            3. Network tab → File → Export
-            """)
+        with docs:
+            st.download_button(
+                "Download Markdown", markdown_docs, "api-docs.md", "text/markdown"
+            )
+            st.markdown(markdown_docs)
+        with spec:
+            st.download_button(
+                "Download OpenAPI JSON",
+                json.dumps(openapi_spec, indent=2),
+                "openapi.json",
+                "application/json",
+            )
+            st.json(openapi_spec)
+        with raw:
+            st.json(
+                {
+                    "transactions": len(transactions),
+                    "endpoints": len(endpoints),
+                    "methods": methods,
+                }
+            )
+    except Exception as error:  # noqa: BLE001
+        st.error("Could not analyze this HAR file.")
+        with st.expander("Technical details"):
+            st.exception(error)
 
 
 if __name__ == "__main__":
