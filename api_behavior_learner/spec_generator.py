@@ -1,3 +1,4 @@
+import json
 from typing import Any
 
 from api_behavior_learner.grouper import EndpointPattern
@@ -19,12 +20,22 @@ class SpecGenerator:
         for pattern, endpoint in sorted(endpoints.items()):
             analysis = self.analyzer.analyze_endpoint(endpoint)
             sample_tx = endpoint.transactions[0] if endpoint.transactions else None
+            request_tx = next(
+                (tx for tx in endpoint.transactions if tx.request.body is not None),
+                None,
+            )
             response_desc = ""
 
             if sample_tx and sample_tx.response.body:
                 response_desc = ResponseAnalyzer.describe_response(
                     sample_tx.response.body
                 )
+
+            if request_tx:
+                md += "### Request Body\n\n"
+                md += "```json\n"
+                md += json.dumps(request_tx.request.body, indent=2)
+                md += "\n```\n\n"
 
             md += f"## {analysis.get('resource', 'Resource').title()}\n\n"
             md += f"**Pattern:** `{pattern}`\n\n"
@@ -75,6 +86,10 @@ class SpecGenerator:
         for pattern, endpoint in endpoints.items():
             analysis = self.analyzer.analyze_endpoint(endpoint)
             sample_tx = endpoint.transactions[0] if endpoint.transactions else None
+            request_tx = next(
+                (tx for tx in endpoint.transactions if tx.request.body is not None),
+                None,
+            )
 
             if pattern not in spec["paths"]:
                 spec["paths"][pattern] = {}
@@ -100,6 +115,19 @@ class SpecGenerator:
                         }
                         for param in sorted(endpoint.param_names)
                     ]
+
+                if request_tx:
+                    operation["requestBody"] = {
+                        "required": True,
+                        "content": {
+                            "application/json": {
+                                "schema": ResponseAnalyzer.get_schema(
+                                    request_tx.request.body
+                                ),
+                                "example": request_tx.request.body,
+                            }
+                        },
+                    }
 
                 # Add response schemas with inferred types
                 for status in sorted(endpoint.status_codes):

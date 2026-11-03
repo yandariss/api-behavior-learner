@@ -2,7 +2,9 @@ import pytest
 
 from api_behavior_learner.grouper import EndpointGrouper
 from api_behavior_learner.har_parser import HARParser
+from api_behavior_learner.llm_analyzer import LLMAnalyzer
 from api_behavior_learner.schema_inferrer import ResponseAnalyzer, SchemaInferrer
+from api_behavior_learner.spec_generator import SpecGenerator
 
 
 def test_har_parser_load():
@@ -71,6 +73,31 @@ def test_response_analyzer_description():
 
     desc = ResponseAnalyzer.describe_response(products_response)
     assert "products" in desc.lower()
+
+
+def test_request_body_in_openapi():
+    """Test request body schema and example generation."""
+    transactions = HARParser("samples/sample.har").load()
+    endpoints = EndpointGrouper(transactions).group()
+    spec = SpecGenerator(LLMAnalyzer(api_key="")).generate_openapi(endpoints)
+
+    create_user = spec["paths"]["/users"]["post"]
+    request_body = create_user["requestBody"]
+    schema = request_body["content"]["application/json"]["schema"]
+
+    assert request_body["required"] is True
+    assert schema["properties"]["name"]["type"] == "string"
+    assert request_body["content"]["application/json"]["example"]["email"]
+
+
+def test_request_body_in_markdown():
+    """Test request body example in Markdown output."""
+    transactions = HARParser("samples/sample.har").load()
+    endpoints = EndpointGrouper(transactions).group()
+    docs = SpecGenerator(LLMAnalyzer(api_key="")).generate_markdown(endpoints)
+
+    assert "### Request Body" in docs
+    assert '"name": "David"' in docs
 
 
 if __name__ == "__main__":
