@@ -1,5 +1,6 @@
 import pytest
 
+from api_behavior_learner.auth_detector import AuthDetector
 from api_behavior_learner.grouper import EndpointGrouper
 from api_behavior_learner.har_parser import HARParser
 from api_behavior_learner.llm_analyzer import LLMAnalyzer
@@ -88,6 +89,32 @@ def test_request_body_in_openapi():
     assert request_body["required"] is True
     assert schema["properties"]["name"]["type"] == "string"
     assert request_body["content"]["application/json"]["example"]["email"]
+
+
+def test_auth_detection():
+    """Test bearer and API key detection without exposing credentials."""
+    transactions = HARParser("samples/sample.har").load()
+    endpoints = EndpointGrouper(transactions).group()
+
+    users_endpoint = endpoints["/users"]
+    schemes = AuthDetector.detect_endpoint(users_endpoint)
+
+    assert {scheme.name for scheme in schemes} == {"bearerAuth"}
+    assert all("token" not in str(scheme).lower() for scheme in schemes)
+
+
+def test_auth_in_openapi():
+    """Test detected authentication in OpenAPI output."""
+    transactions = HARParser("samples/sample.har").load()
+    endpoints = EndpointGrouper(transactions).group()
+    spec = SpecGenerator(LLMAnalyzer(api_key="")).generate_openapi(endpoints)
+
+    assert spec["components"]["securitySchemes"]["bearerAuth"] == {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+    }
+    assert spec["paths"]["/users"]["get"]["security"] == [{"bearerAuth": []}]
 
 
 def test_request_body_in_markdown():

@@ -1,6 +1,7 @@
 import json
 from typing import Any
 
+from api_behavior_learner.auth_detector import AuthDetector
 from api_behavior_learner.grouper import EndpointPattern
 from api_behavior_learner.llm_analyzer import LLMAnalyzer
 from api_behavior_learner.schema_inferrer import ResponseAnalyzer
@@ -24,6 +25,7 @@ class SpecGenerator:
                 (tx for tx in endpoint.transactions if tx.request.body is not None),
                 None,
             )
+            auth_label = AuthDetector.label(endpoint)
             response_desc = ""
 
             if sample_tx and sample_tx.response.body:
@@ -40,6 +42,7 @@ class SpecGenerator:
             md += f"## {analysis.get('resource', 'Resource').title()}\n\n"
             md += f"**Pattern:** `{pattern}`\n\n"
             md += f"**Purpose:** {analysis.get('purpose', 'Unknown')}\n\n"
+            md += f"**Authentication:** {auth_label}\n\n"
 
             md += "### Methods\n\n"
             for method in sorted(endpoint.methods):
@@ -58,7 +61,6 @@ class SpecGenerator:
             if response_desc:
                 md += f"- **Description:** {response_desc}\n"
             md += f"- **Status Codes:** {', '.join(sorted(str(s) for s in endpoint.status_codes))}\n"
-            md += f"- **Authentication:** {analysis.get('authentication', 'Unknown')}\n"
             md += "\n"
 
         return md
@@ -70,6 +72,8 @@ class SpecGenerator:
         version: str = "1.0.0",
     ) -> dict[str, Any]:
         """Generate OpenAPI 3.0.0 specification."""
+        detected_auth = AuthDetector.detect_all(endpoints)
+
         spec = {
             "openapi": "3.0.0",
             "info": {
@@ -83,6 +87,13 @@ class SpecGenerator:
             "paths": {},
         }
 
+        if detected_auth:
+            spec["components"] = {
+                "securitySchemes": {
+                    name: scheme.openapi() for name, scheme in detected_auth.items()
+                }
+            }
+
         for pattern, endpoint in endpoints.items():
             analysis = self.analyzer.analyze_endpoint(endpoint)
             sample_tx = endpoint.transactions[0] if endpoint.transactions else None
@@ -90,6 +101,7 @@ class SpecGenerator:
                 (tx for tx in endpoint.transactions if tx.request.body is not None),
                 None,
             )
+            auth_schemes = AuthDetector.detect_endpoint(endpoint)
 
             if pattern not in spec["paths"]:
                 spec["paths"][pattern] = {}
@@ -103,6 +115,11 @@ class SpecGenerator:
                     "tags": [analysis.get("resource", "resource").title()],
                     "responses": {},
                 }
+
+                if auth_schemes:
+                    operation["security"] = [
+                        {scheme.name: []} for scheme in auth_schemes
+                    ]
 
                 # Add parameter documentation
                 if endpoint.param_names:
