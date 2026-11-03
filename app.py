@@ -19,27 +19,27 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .stApp { background: #080b14; color: #e8eefc; }
-    [data-testid="stHeader"] { background: rgba(8,11,20,.92); }
-    [data-testid="stSidebar"] { background: #0d1220; border-right: 1px solid #1f2a44; }
-    .hero { padding: 2.5rem 2.8rem; border: 1px solid #263858; border-radius: 24px; background: linear-gradient(135deg,#101a32 0%,#111229 55%,#1a1230 100%); box-shadow: 0 20px 60px rgba(0,0,0,.25); }
-    .eyebrow { color: #6ee7d8; font-size: .78rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
-    .hero h1 { color: #f7faff; font-size: 3.2rem; line-height: 1.05; margin: .5rem 0 1rem; }
-    .hero p { color: #aab8d4; font-size: 1.05rem; max-width: 720px; }
-    .step { background: #10182a; border: 1px solid #243655; border-radius: 14px; padding: 1rem; min-height: 112px; }
-    .step b { color: #f7faff; display: block; margin-bottom: .4rem; }
-    .step span { color: #91a2c2; font-size: .9rem; }
-    .metric-card { background: #10182a; border: 1px solid #263858; border-radius: 16px; padding: 1rem 1.2rem; }
-    .metric-label { color: #8798b8; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
-    .metric-value { color: #f7faff; font-size: 2rem; font-weight: 800; }
-    .endpoint { background: #10182a; border: 1px solid #263858; border-radius: 12px; padding: .8rem 1rem; margin: .45rem 0; }
+    .stApp { background: #f5f7fb; color: #172033; }
+    [data-testid="stHeader"] { background: rgba(245,247,251,.94); }
+    [data-testid="stSidebar"] { background: #ffffff; border-right: 1px solid #e2e8f0; }
+    .hero { padding: 2.5rem 2.8rem; border: 1px solid #dbe4f0; border-radius: 24px; background: linear-gradient(135deg,#ffffff 0%,#eef5ff 55%,#f3efff 100%); box-shadow: 0 18px 45px rgba(30,64,115,.12); }
+    .eyebrow { color: #2563eb; font-size: .78rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .hero h1 { color: #13213a; font-size: 3.2rem; line-height: 1.05; margin: .5rem 0 1rem; }
+    .hero p { color: #53657f; font-size: 1.05rem; max-width: 720px; }
+    .step { background: #ffffff; border: 1px solid #dbe4f0; border-radius: 14px; padding: 1rem; min-height: 112px; box-shadow: 0 8px 22px rgba(30,64,115,.06); }
+    .step b { color: #172033; display: block; margin-bottom: .4rem; }
+    .step span { color: #667892; font-size: .9rem; }
+    .metric-card { background: #ffffff; border: 1px solid #dbe4f0; border-radius: 16px; padding: 1rem 1.2rem; box-shadow: 0 8px 22px rgba(30,64,115,.06); }
+    .metric-label { color: #71819a; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+    .metric-value { color: #172033; font-size: 2rem; font-weight: 800; }
+    .endpoint { background: #ffffff; border: 1px solid #dbe4f0; border-radius: 12px; padding: .8rem 1rem; margin: .45rem 0; box-shadow: 0 4px 12px rgba(30,64,115,.04); }
     .method { display: inline-block; border-radius: 6px; padding: .2rem .45rem; margin-right: .65rem; font-size: .72rem; font-weight: 800; }
-    .get { color: #70e1c5; background: #12352f; } .post { color: #86b8ff; background: #172e57; }
-    .put { color: #f8d276; background: #493916; } .delete { color: #ff8f9b; background: #4a2028; }
-    .path { color: #e8eefc; font-family: monospace; } .status { color: #91a2c2; float: right; font-size: .82rem; }
-    div[data-testid="stFileUploader"] { background: #10182a; border: 1px dashed #4f6fa8; border-radius: 18px; padding: .6rem; }
-    .stButton > button, .stDownloadButton > button { border-radius: 10px; border: 1px solid #3b82f6; background: #17366c; color: #eaf2ff; font-weight: 700; }
-    .stButton > button:hover, .stDownloadButton > button:hover { border-color: #6ee7d8; background: #1d4c76; }
+    .get { color: #087f5b; background: #d3f9e8; } .post { color: #1d4ed8; background: #dbeafe; }
+    .put { color: #9a6700; background: #fff3bf; } .delete { color: #c92a2a; background: #ffe3e3; }
+    .path { color: #263b5b; font-family: monospace; } .status { color: #71819a; float: right; font-size: .82rem; }
+    div[data-testid="stFileUploader"] { background: #ffffff; border: 1px dashed #9bb7df; border-radius: 18px; padding: .6rem; }
+    .stButton > button, .stDownloadButton > button { border-radius: 10px; border: 1px solid #2563eb; background: #2563eb; color: #ffffff; font-weight: 700; }
+    .stButton > button:hover, .stDownloadButton > button:hover { border-color: #1d4ed8; background: #1d4ed8; }
     </style>
     """,
     unsafe_allow_html=True,
